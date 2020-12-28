@@ -1,1 +1,6 @@
-<h4>File upload</h4>
+<h2>File upload</h2>
+<!--"/images is our expressupload route POST endpoint"-->
+<form action="/images" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" id="image">
+    <button type="submit">Submit</button>
+</form>
