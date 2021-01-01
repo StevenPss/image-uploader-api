@@ -6,6 +6,8 @@ require('dotenv/config');
 //SET UP EXPRESS
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 
 //Database connect
 mongoose.connect(process.env.DB_CONNECTION, {  useNewUrlParser: true, useUnifiedTopology: true },
@@ -22,4 +24,4 @@ app.use('/uploads', express.static('uploads'));
 app.use('/images', imageRoutes);
 
 //LISTEN to a particuler port
-app.listen(3000, () => console.log("Listening on port 3000......"));
+app.listen(port, () => console.log(`Listening on port ${port} .....`));
