@@ -10,7 +10,7 @@ exports.images_post_image = async (req, res) => {
 
     //file is present
     if (req.file) {
-        image.image = req.file.path;//"uploads/file.ext",
+        image.image = req.file.location;//req.file.path if using local storage "uploads/file.ext",
     }
 
     await image.save()
