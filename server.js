@@ -20,7 +20,7 @@ const imageRoutes = require('./api/routes/image');
 // USE
 app.use(cors());
 app.use(express.static('public'));
-app.use('/uploads', express.static('uploads'));
+//app.use('/uploads', express.static('uploads')); // if not using AWS S3 Bucket uncomment
 app.use('/images', imageRoutes);
 
 //LISTEN to a particuler port

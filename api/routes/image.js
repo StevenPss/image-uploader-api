@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const upload = require('../util/upload');
+//const upload = require('../util/upload'); //local upload
+const upload = require('../util/uploads'); // s3 bucket upload
 
 const ImagesController = require('../controllers/ImagesController');
 
